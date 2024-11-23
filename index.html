@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="h-full w-full">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./src/output.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              ttuPattern:
+                'url("https://images.unsplash.com/photo-1428908728789-d2de25dbd4e2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+              pattern1:
+                'url("https://images.unsplash.com/photo-1519752447979-d8e8fb81a74f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+              pattern2:
+                'url("https://images.unsplash.com/photo-1518066000714-58c45f1a2c0a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+            backdropBlur: {
+              xs: "2px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-black to-slate-600 md:bg-pattern2 md:bg-cover h-full w-full md:w-full flex flex-col p-0 m-0 md:space-y-10"
+  >
+    <div
+      class="hidden md:block md:bg-transparent md:text-center md:w-full md:p-6 text-xl font-poppins font-normal subpixel-antialiased text-white"
+    >
+      “We cannot solve problems with the kind of thinking we employed when we
+      came up with them.” —Albert Einstein
+    </div>
+
+    <div
+      class="flex flex-col items-center md:items-stretch pt-4 md:flex md:flex-row md:gap-3 md:h-2/3 md:w-4/5 md:self-center md:pt-2"
+    >
+      <div
+        class="grid grid-cols-2 w-4/6 py-2 gap-2 md:gap-5 md:basis-4/12 order-2 md:order-1 md:py-4"
+      >
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-md md:text-lg font-normal font-poppins text-center text-white"
+          >
+            Feels Like
+          </div>
+          <div
+            class="feels_like self-center font-poppins text-xl md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-md md:text-lg text-center font-poppins font-normal text-white"
+          >
+            Wind Speed
+          </div>
+          <div
+            class="wind_speed self-center font-poppins text-xl md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-sm md:text-lg text-center font-poppins font-normal text-white"
+          >
+            Temperature ▼
+          </div>
+          <div
+            class="temp_min self-center font-poppins md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-sm md:text-lg text-center font-poppins font-normal text-white"
+          >
+            Temperature ▲
+          </div>
+          <div
+            class="temp_max self-center font-poppins text-xl md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+      </div>
+
+      <div
+        class="bg-transparent backdrop-blur-xs border border-slate-200 flex flex-col justify-evenly w-4/6 p-2 md:basis-5/12 space-y-8 md:p-4 rounded-md shadow-md order-1 md:order-2"
+      >
+        <div class="flex flex-row gap-2 justify-between">
+          <input
+            type="text"
+            id="input_value"
+            placeholder="Search for a city..."
+            class="px-4 py-3 bg-transparent text-white border rounded-md w-5/6 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <button
+            class="btn bg-transparent backdrop-blur-xs hover:border-blue-500 hover:bg-white hover:bg-opacity-30 text-white p-4 text-center rounded-md border border-white"
+          >
+            <img
+              src="./assets/search_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png"
+              class="w-9 h-9 p-1"
+              alt=""
+            />
+          </button>
+        </div>
+
+        <div
+          class="p-3 basis-3/4 flex flex-col justify-between items-center space-y-5"
+        >
+          <img
+            src="./assets/cloud.png"
+            alt="Cloudy"
+            class="main invisible w-[120px] h-[100px]"
+          />
+          <div
+            class="temp text-4xl text-white font-poppins font-bold mt-4"
+          ></div>
+          <div class="weather_main text-white font-poppins text-3xl mt-2"></div>
+        </div>
+      </div>
+
+      <div
+        class="right-container bg-transparent grid grid-cols-2 w-4/6 pb-2 gap-2 md:gap-5 md:basis-4/12 order-3 md:order-3 md:py-4"
+      >
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-md md:text-lg font-normal font-poppins text-center text-white"
+          >
+            Pressure
+          </div>
+          <div
+            class="pressure self-center font-poppins text-xl md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-md md:text-lg text-center font-poppins font-normal text-white"
+          >
+            Humidity
+          </div>
+          <div
+            class="humidity self-center font-poppins text-xl md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-md md:text-lg text-center font-poppins font-normal text-white"
+          >
+            Sea Level
+          </div>
+          <div
+            class="sea_level self-center font-poppins text-xl md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+        <div
+          class="md:invisible bg-transparent backdrop-blur-xs border border-white flex flex-col rounded-2xl md:rounded-md p-3 gap-2 shadow-md ct"
+        >
+          <div
+            class="text-md md:text-lg text-center font-poppins font-normal text-white"
+          >
+            Ground Level
+          </div>
+          <div
+            class="grnd_level self-center font-poppins text-xl md:text-2xl pt-6 font-semibold text-white"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden md:bg-transparent md:flex md:flex-col md:justify-center md:space-y-3 md:bg-opacity-35 md:items-center md:pt-4"
+    >
+      <span
+        class="current_time font-poppins w-fit font-light text-2xl backdrop-blur-xs bg-opacity-30 px-2 rounded-lg shadow-xl bg-black text-center text-white"
+      ></span>
+      <span
+        class="current_day font-poppins w-fit font-light text-2xl px-2 backdrop-blur-xs bg-opacity-30 rounded-lg shadow-xl bg-black text-center text-white"
+      ></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
